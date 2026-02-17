@@ -1,0 +1,70 @@
+{% block content %}
+<header>
+  <nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}">Мой Блог</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="{% url 'home' %}"
+              >Главная</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{%  url 'contacts' %}">Контакты</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Донаты
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  target="_blank"
+                  class="dropdown-item"
+                  href="https://boosty.to/dera/ref?gad_source=1&gad_campaignid=22698049373&gbraid=0AAAAA_snZvKwlegeiMz9TcEfvnDfcofTt&gclid=Cj0KCQiA18DMBhDeARIsABtYwT3xtKWiR35BJw1v3cqlBcqbdNurxMErmE-cUeY-JwAzJbR1hI2AXEYaAusQEALw_wcB"
+                  >Boosty</a
+                >
+              </li>
+              <li><a class="dropdown-item" href="#">Patreon</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#">Политика конфедициальности</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+{% endblock %}
